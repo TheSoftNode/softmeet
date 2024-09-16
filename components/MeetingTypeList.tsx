@@ -20,7 +20,8 @@ const initialValues = {
   link: "",
 };
 
-const MeetingTypeList = () => {
+const MeetingTypeList = () =>
+{
   const router = useRouter();
   const [meetingState, setMeetingState] = useState<
     "isScheduleMeeting" | "isJoiningMeeting" | "isInstantMeeting" | undefined
@@ -31,10 +32,13 @@ const MeetingTypeList = () => {
   const { user } = useUser();
   const { toast } = useToast();
 
-  const createMeeting = async () => {
+  const createMeeting = async () =>
+  {
     if (!client || !user) return;
-    try {
-      if (!values.dateTime) {
+    try
+    {
+      if (!values.dateTime)
+      {
         toast({ title: "Please select a date and time" });
         return;
       }
@@ -53,13 +57,15 @@ const MeetingTypeList = () => {
         },
       });
       setCallDetail(call);
-      if (!values.description) {
+      if (!values.description)
+      {
         router.push(`/meeting/${call.id}`);
       }
       toast({
         title: "Meeting Created",
       });
-    } catch (error) {
+    } catch (error)
+    {
       console.error(error);
       toast({ title: "Failed to create Meeting" });
     }
@@ -138,7 +144,8 @@ const MeetingTypeList = () => {
           isOpen={meetingState === "isScheduleMeeting"}
           onClose={() => setMeetingState(undefined)}
           title="Meeting Created"
-          handleClick={() => {
+          handleClick={() =>
+          {
             navigator.clipboard.writeText(meetingLink);
             toast({ title: "Link Copied" });
           }}

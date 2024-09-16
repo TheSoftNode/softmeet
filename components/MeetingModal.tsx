@@ -5,7 +5,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import Image from "next/image";
 
-interface MeetingModalProps {
+interface MeetingModalProps
+{
   isOpen: boolean;
   onClose: () => void;
   title: string;
@@ -31,7 +32,8 @@ const MeetingModal = ({
   image,
   buttonClassName,
   buttonIcon,
-}: MeetingModalProps) => {
+}: MeetingModalProps) =>
+{
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="flex w-full max-w-[520px] flex-col gap-6 border-none bg-dark-1 px-6 py-9 text-white">

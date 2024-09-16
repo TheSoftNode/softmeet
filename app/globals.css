@@ -61,7 +61,7 @@ svg {
 
 .cl-socialButtonsIconButton__github {
     filter: invert(1);
-    border: 3px solid #565761 !important;
+    /* border: 3px solid #565761 !important; */
     /* color: #fff !important; */
 }
 

@@ -23,6 +23,13 @@ const Navbar = (props: Props) => {
                 alt="softmeet logo"
                 className="max-sm:size-10"
             />
+             {/* <Image
+                src="/icons/softmeet.png"
+                width={110}
+                height={50}
+                alt="softmeet logo"
+                className="max-sm:size-10"
+            /> */}
             <p className="text-[26px] font-extrabold text-white max-sm:hidden">
                 SoftMeet
             </p>
